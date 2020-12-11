@@ -5,23 +5,34 @@ namespace PierreBakery.Models
 {
   public class Bread 
   {
-    public int BreadNum {get; set;}
+    public int Sourdough {get; set;}
+    public int SourdoughCost {get; set;}
+    public int French {get; set;}
+    public int FrenchCost {get; set;}
 
-    public Bread (int order)
+    public Bread ()
     {
-      BreadNum = order;
+      Sourdough=0;
+      SourdoughCost = 5;
+      French=0;
+      FrenchCost = 10;
     }
 
-    public int OrderCost()
+    public int OrderCost(int cost, int typeAmount)
     {
-      if(BreadNum % 3 == 0 || (BreadNum > 3 && BreadNum % 3 > 0)){
-        int cost = (BreadNum - (BreadNum/3)) * 5;
-        return cost;
+      if(typeAmount % 3 == 0 || (typeAmount > 3 && typeAmount % 3 > 0)){
+        int total = (typeAmount - (typeAmount/3)) * cost;
+        return total;
       }
       else
       {
-        return BreadNum * 5;
+        return typeAmount * cost;
       }
+    }
+
+    public int TypeOfBread(string typeName)
+    {
+      return 0;
     }
   }
   
