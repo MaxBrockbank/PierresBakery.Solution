@@ -6,17 +6,28 @@ namespace PierreBakery.Models
   public class Pastry 
   {
     public int PastryNum {get; set;}
-    public int PastryPrice {get; set;}
 
     public Pastry(int order)
     {
       PastryNum = order;
-      PastryPrice = order * 2;
     }
 
     public int OrderCost()
     {
-      return 0;
+      if(PastryNum % 3 == 0)
+      {
+        int cost = (PastryNum/3) * 5;
+        return cost;
+      }
+      else if(PastryNum % 3 > 0 && PastryNum > 3)
+      {
+        int cost = ((PastryNum/3) * 5) + ((PastryNum%3) * 2);
+        return cost;
+      }
+      else
+      {
+        return PastryNum * 2;
+      }
     }
   }
   
