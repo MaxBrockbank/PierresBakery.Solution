@@ -16,11 +16,18 @@ namespace PierreBakery.Tests
       Assert.AreEqual(20, result);
     }
     [TestMethod]
-    public void TypeOfBread_UseRegexToValidateTypeOfBreadEntered_Int()
+    public void TypeOfBread_UseRegexToValidateFrench_Int()
     {
       Bread newOrder = new Bread();
-      int result = newOrder.TypeOfBread("French");
-      Assert.AreEqual(10, result);
+      int result = newOrder.TypeOfBread("French", 5);
+      Assert.AreEqual(40, result);
+    }
+    [TestMethod]
+    public void TypeOfBread_UseRegexToValidateSourdough_Int()
+    {
+      Bread newOrder = new Bread();
+      int result = newOrder.TypeOfBread("Sourdough", 5);
+      Assert.AreEqual(20, result);
     }
   }
   [TestClass]

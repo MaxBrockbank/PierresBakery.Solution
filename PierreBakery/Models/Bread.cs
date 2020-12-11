@@ -36,16 +36,16 @@ namespace PierreBakery.Models
       }
     }
 
-    public int TypeOfBread(string typeName)
+    public int TypeOfBread(string typeName, int amount)
     {
       Regex sourType = new Regex(@"sourdough", RegexOptions.IgnoreCase);
       Regex frenchType = new Regex(@"french", RegexOptions.IgnoreCase);
       if(sourType.IsMatch(typeName)){
-        return SourdoughCost;
+        return OrderCost(SourdoughCost, amount);
       }
       else if (frenchType.IsMatch(typeName))
       {
-        return FrenchCost;
+        return OrderCost(FrenchCost, amount);
       }
       else {
         return 0;
