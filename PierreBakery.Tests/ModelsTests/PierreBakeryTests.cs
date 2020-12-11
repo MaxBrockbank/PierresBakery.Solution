@@ -19,7 +19,7 @@ namespace PierreBakery.Tests
     public void TypeOfBread_UseRegexToValidateTypeOfBreadEntered_Int()
     {
       Bread newOrder = new Bread();
-      int result = newOrder.TypeOfBread("Sourdough");
+      int result = newOrder.TypeOfBread("French");
       Assert.AreEqual(10, result);
     }
   }
