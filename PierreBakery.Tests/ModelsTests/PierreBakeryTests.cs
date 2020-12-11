@@ -10,9 +10,9 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void OrderCost_CalculatesCostOfOrderWithDeal_Int()
     {
-      Bread newOrder = new Bread(3);
+      Bread newOrder = new Bread(6);
       int result = newOrder.OrderCost();
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(20, result);
     }
   }
 
