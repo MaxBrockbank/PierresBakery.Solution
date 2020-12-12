@@ -7,7 +7,7 @@
 
 # Description
 
-
+This is a C# command line interface program for a hypothetical bakery. You are asked your name, to choose which type of bread, how many loves of that bread you'd, how many pasteries you'd, and payment method of choice. The business logic takes care of calculating your total based off how many of each baked item you'd like and applies the deal that it specifies to you. 
 
 ## Required Technologies
 * C#
