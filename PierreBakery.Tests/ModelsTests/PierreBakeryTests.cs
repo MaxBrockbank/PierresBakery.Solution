@@ -8,6 +8,15 @@ namespace PierreBakery.Tests
   public class BreadTests
   {
     [TestMethod]
+    public void OrderCost_CalculateOriginalCostOfBread_Int()
+    {
+      Bread newOrder = new Bread();
+      newOrder.Sourdough = 5;
+      newOrder.OrderCost(newOrder.Sourdough, newOrder.SourdoughCost);
+      int result = 25;
+      Assert.AreEqual(result, newOrder.OriginalCost);
+    }
+    [TestMethod]
     public void OrderCost_CalculatesCostOfBreadOrderWithDeal_Int()
     {
       Bread newOrder = new Bread();

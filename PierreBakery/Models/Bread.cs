@@ -12,7 +12,7 @@ namespace PierreBakery.Models
     public int French {get; set;}
     public int FrenchCost {get; set;}
     public int Total {get; set;}
-    
+    public int OriginalCost {get; set;}
 
     public Bread ()
     {
