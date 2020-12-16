@@ -43,6 +43,14 @@ namespace PierreBakery.Tests
   public class PastryTests
   {
     [TestMethod]
+    public void OrderCost_CalculateOriginalCostOfPasteries_Int()
+    {
+      Pastry newOrder = new Pastry(5);
+      int result = 10;
+      Assert.AreEqual(result, newOrder.OriginalCost);
+    }
+
+    [TestMethod]
     public void OrderCost_CalculatesCostOfPastryOrderWithDeal_Int()
     {
       Pastry newOrder = new Pastry(5);

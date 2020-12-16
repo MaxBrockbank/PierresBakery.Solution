@@ -6,6 +6,7 @@ namespace PierreBakery.Models
   public class Pastry 
   {
     public int PastryNum {get; set;}
+    public int OriginalCost {get; set;}
 
     public Pastry(int order)
     {
@@ -14,6 +15,7 @@ namespace PierreBakery.Models
 
     public int OrderCost()
     {
+
       if(PastryNum % 3 == 0)
       {
         int cost = (PastryNum/3) * 5;
