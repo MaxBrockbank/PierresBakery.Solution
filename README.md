@@ -17,12 +17,14 @@ This is a C# command line interface program for a hypothetical bakery. You are a
 1. Clone this repo to your local computer.
 2. Open it up in your text editor.
 3. In your terminal navigate from the root directory to the `PierreBakery.Tests` sub-directory.
-4. Run the command `dotnet restore` to create the obj directories and allow for using the testing tools.
+4. Run the command `dotnet restore` to create the obj directories and allow for using the testing tools. Then run the command `dotnet test` in this same directory to run unit testing.
 5. In your temrinal navigate from the `PierreBakery.Test` sub-directory to its sibling directory `PierreBakery`.
 6. Run the command `dotnet run` to build and run the program.
 
 ## Technologies Used
-* C#
+* C# / .NET
+* MSTest
+
 
 ## Known Bugs
 
