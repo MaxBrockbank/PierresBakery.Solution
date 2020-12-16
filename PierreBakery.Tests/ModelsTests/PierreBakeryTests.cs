@@ -46,6 +46,7 @@ namespace PierreBakery.Tests
     public void OrderCost_CalculateOriginalCostOfPasteries_Int()
     {
       Pastry newOrder = new Pastry(5);
+      newOrder.OrderCost();
       int result = 10;
       Assert.AreEqual(result, newOrder.OriginalCost);
     }
