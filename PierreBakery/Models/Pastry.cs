@@ -15,7 +15,7 @@ namespace PierreBakery.Models
 
     public int OrderCost()
     {
-
+      OriginalCost = PastryNum * 2;
       if(PastryNum % 3 == 0)
       {
         int cost = (PastryNum/3) * 5;
