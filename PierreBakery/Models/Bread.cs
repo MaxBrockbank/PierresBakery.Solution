@@ -25,6 +25,7 @@ namespace PierreBakery.Models
 
     public int OrderCost(int cost, int typeAmount)
     {
+      OriginalCost = cost * typeAmount;
       if(typeAmount % 3 == 0 || (typeAmount > 3 && typeAmount % 3 > 0)){
         Total += (typeAmount - (typeAmount/3)) * cost;
         return Total;
